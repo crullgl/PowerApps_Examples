@@ -1,6 +1,6 @@
 # 🪑 Desk Reservation Power App Documentation
 
-![Reservation UI](images/Screenshot%202025-05-09Screenshot%20075641.png)
+![HomeScreen UI](images/Screenshot%202025-05-09%20075641.png)
 ![Reservation UI](images/Screenshot%202025-05-08Screenshot%200154346.png)
 ![Recurring Settings](images/Screenshot%202025-05-08%20153342.png)
 ![Booking Overview](images/Screenshot%202025-05-08%20114656.png)
