@@ -1,10 +1,11 @@
 
 <p align="center">
-  <img src="Images/Screenshot_090750.png" width="200" />
-  <img src="Images/Screenshot_090808.png" width="200" />
-  <img src="Images/Screenshot_090827.png" width="200" />
-  <img src="Images/Screenshot_090845.png" width="200" />
+  <img src="./Images/Screenshot%202025-05-09%20090750.png" alt="Input Form" width="200" />
+  <img src="./Images/Screenshot%202025-05-09%20090808.png" alt="Goal Management" width="200" />
+  <img src="./Images/Screenshot%202025-05-09%20090827.png" alt="24hr Review" width="200" />
+  <img src="./Images/Screenshot%202025-05-09%20090845.png" alt="Staffing Methodology" width="200" />
 </p>
+
 
 # HPPD Staffing Methodology App
 
