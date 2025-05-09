@@ -25,47 +25,70 @@ A Power Apps solution to track, calculate, and manage HPPD (Hours Per Patient Da
 
 ## 📂 SharePoint Lists and Column Details
 
-### STAFFING METHODOLOGY
-Tracks daily staffing input.
+### 1. `STAFFING METHODOLOGY` — Daily Staffing Records
 
 | Column Name         | Type             | Purpose |
 |---------------------|------------------|---------|
+| Title               | Text             | Generic label |
+| Created             | Date & Time      | Auto timestamp |
+| Unit                | Choice           | Hospital unit |
+| Date                | Date & Time      | Staffing day |
 | RN's, NA, LPN       | Number           | Staff counts |
-| Census              | Number           | Patient count |
-| Date, Unit, Shift   | Date/Choice      | Staffing breakdown |
-| CalculatedHPPD02    | Calculated       | Main HPPD value |
-| Goal2, 10above, 10below | Text         | Goal thresholds |
-| Sitter Staff, Charge RN | Number/Choice | Additional roles |
-| Comment, Alert      | Choice/Metadata  | Context info |
+| CENSUS              | Number           | Patient count |
+| Shifts              | Choice           | Day/Evening/Night |
+| Sitter Staff        | Number           | Additional support staff |
+| Charge RN, Scheduled NA/RN | Choice/Number | Staffing plan |
+| CalculatedHPPD02    | Calculated       | Main HPPD formula |
+| 10above / 10below   | Text             | Goal variance |
+| Goal2               | Text             | Unit target |
+| Comment, Alert      | Choice/Metadata  | Notes/tags |
 
-### STAFFING CONTROL #
-Stores HPPD goals per unit/shift.
+---
 
-| Ward, Shift         | Choice           | Used to filter views |
-| HPPD_Goal           | Text             | Target value |
-| Hrs, Comment        | Number/Text      | Supporting data |
+### 2. `STAFFING CONTROL #` — HPPD Targets
 
-### NODACTUAL24HR
-Used in the T-24 review.
+| Column Name   | Type     | Purpose |
+|---------------|----------|---------|
+| Ward          | Choice   | Unit reference |
+| HPPD_Goal     | Text     | Goal value |
+| Shift         | Choice   | Shift type |
+| Hrs           | Number   | Shift length |
+| Comment       | Text     | Notes or updates |
 
-| Date24Hr            | Date             | Targeted review day |
-| HPPD Budget/High/Low| Text             | Target range |
-| Actual_HPPD         | Text             | Reported value |
-| Actions_Taken       | Text             | Follow-up notes |
+---
 
-### HPPD 24hr Budget
-Comparison goals for reporting.
+### 3. `NODACTUAL24HR` — 24-Hour Actuals
 
-| HPPD_Budget         | Text             | Goal values |
-| UnitName, Division  | Choice           | For filtering logic |
-| Active_Disabled     | Choice           | Flag for enabling view |
+| Column Name     | Type     | Purpose |
+|------------------|----------|---------|
+| Ward             | Text     | Unit name |
+| Date24Hr         | Date     | Snapshot date |
+| HPPD Budget/High/Low | Text | Goal thresholds |
+| Actual_HPPD      | Text     | Actual value logged |
+| Actions_Taken    | Text     | Response actions |
 
-### HPPDAppSecuityGroup
-Admin control access.
+---
 
-| UserEmail           | Person or Group  | Matches current user |
-| RoleName            | Choice           | Defines access level |
+### 4. `HPPD 24hr Budget` — Comparison Dataset
 
+| Column Name     | Type     | Purpose |
+|------------------|----------|---------|
+| Ward             | Choice   | Unit reference |
+| HPPD_Budget      | Text     | Goal |
+| UnitName         | Choice   | Friendly name |
+| Division         | Choice   | Used for UD/DD tabs |
+| Active_Disabled  | Choice   | Display logic toggle |
+
+---
+
+### 5. `HPPDAppSecuityGroup` — Admin Access
+
+| Column Name   | Type           | Purpose |
+|----------------|----------------|---------|
+| UserEmail      | Person or Group| Email match for current user |
+| RoleName       | Choice         | Currently: "Admin" |
+
+---
 ---
 
 ## 🔧 Power Apps Logic (Fx) in YAML
