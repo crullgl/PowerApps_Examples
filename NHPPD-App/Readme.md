@@ -1,9 +1,9 @@
 
 <p align="center">
-  <img src="images/Screenshot_090750.png" width="200" />
-  <img src="images/Screenshot_090808.png" width="200" />
-  <img src="images/Screenshot_090827.png" width="200" />
-  <img src="images/Screenshot_090845.png" width="200" />
+  <img src="Images/Screenshot_090750.png" width="200" />
+  <img src="Images/Screenshot_090808.png" width="200" />
+  <img src="Images/Screenshot_090827.png" width="200" />
+  <img src="Images/Screenshot_090845.png" width="200" />
 </p>
 
 # HPPD Staffing Methodology App
